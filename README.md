@@ -18,3 +18,43 @@ A simple CLI tool written in Rust to **parse, sanitize, and validate JSON files*
 ### 1. Install Rust
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+### 2. Clone the Repo
+```bash
+git clone https://github.com/YOUR_USERNAME/json_parser_validator.git
+cd json_parser_validator
+```
+
+### 3. Build & Run
+```bash
+cargo run -- path/to/input.json
+```
+
+### 📂 Project Structure
+```bash
+src/
+├── lib.rs   # Core logic: sanitization, parsing, validation
+└── main.rs  # CLI entry point
+Cargo.toml   # Dependencies & metadata
+```
+
+### 🧪 Example
+```json
+{
+    "name": "Alice",
+    "age": 30
+}
+```
+Run:
+```bash
+cargo run -- data.json
+```
+Output:
+```bash
+✅ JSON is valid!
+{
+  "name": "Alice",
+  "age": 30
+}
+```
